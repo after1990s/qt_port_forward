@@ -2,9 +2,10 @@
 #define FORWARDOBJECT_H
 
 #include <QObject>
-#include <windows.h>
 #include <WinSock2.h>
-#pragma comment(lib, "ws32_2.lib")
+#include <windows.h>
+
+#pragma comment(lib, "ws2_32.lib")
 
 class ForwardObject : public QObject
 {

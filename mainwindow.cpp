@@ -16,9 +16,15 @@ MainWindow::MainWindow(QWidget *parent) :
     QLabel *labelListenPort = new QLabel(this);
     labelListenPort->setText ("Listen Port");
     QLineEdit *leListenPort = new QLineEdit(this);
-    QLabel *labelForwardAD = new QLabel(this);
-    labelForwardAD->setText("Forward Address");
-    QLineEdit *leForwardAD = new QLineEdit(this);
+
+    QLabel *labelForwardIP = new QLabel(this);
+    labelForwardIP->setText("Forward IP");
+    QLineEdit *leForwardIP = new QLineEdit(this);
+
+    QLabel *labelForwardPort = new QLabel(this);
+    labelForwardPort->setText("Forward Port");
+    QLineEdit *leForwardPort = new QLineEdit(this);
+
     QPushButton *btnForward = new QPushButton(this);
     btnForward->setText ("ADD");
 
@@ -26,8 +32,10 @@ MainWindow::MainWindow(QWidget *parent) :
     vLayout->addLayout (hLayout);
     hLayout->addWidget (labelListenPort);
     hLayout->addWidget (leListenPort);
-    hLayout->addWidget (labelForwardAD);
-    hLayout->addWidget (leForwardAD);
+    hLayout->addWidget (labelForwardIP);
+    hLayout->addWidget (leForwardIP);
+    hLayout->addWidget (labelForwardPort);
+    hLayout->addWidget (leForwardPort);
     hLayout->addWidget (btnForward);
 
 
@@ -58,9 +66,9 @@ MainWindow::MainWindow(QWidget *parent) :
     //地址编辑时
 
     //初始化forward线程
-    ForwardObject *forwardObj = new ForwardObject();
+ /*   ForwardObject *forwardObj = new ForwardObject();
     QThread *forwardThd =  new QThread();
-    obj->moveToThread (forwardThd);
+    obj->moveToThread (forwardThd);*/
 
 
 }
